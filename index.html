@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="it">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Corporate Wardrobe Care: benefit aziendale per lavaggio, stiraggio e rotazione settimanale degli abiti da lavoro. Zero pensieri per i dipendenti, semplice per HR." />
+    <title>Corporate Wardrobe Care — Benefit guardaroba aziendale</title>
+    <link rel="stylesheet" href="./style/css.css">
+    <script src="./index.js" defer></script>
+
+</head>
+
+<body>
+<a class="skip-link" href="#contenuto">Vai al contenuto</a>
+
+<header class="header" role="banner">
+    <div class="container">
+        <nav class="nav" aria-label="Navigazione principale">
+            <a class="brand" href="#top">
+                <span class="brand__mark" aria-hidden="true"></span>
+                <span class="brand__name">
+          <strong>Corporate Wardrobe Care</strong>
+          <span>Benefit guardaroba · operativo e ricorrente</span>
+        </span>
+            </a>
+
+            <div class="nav__links" role="navigation" aria-label="Sezioni">
+                <a href="#come-funziona">Come funziona</a>
+                <a href="#benefici-azienda">Benefici HR</a>
+                <a href="#dipendenti">Per i dipendenti</a>
+                <a href="#modello">Modello economico</a>
+                <a href="#use-case">Use case</a>
+            </div>
+
+            <div class="nav__actions">
+                <a class="btn btn--link" href="#cta" aria-label="Vai al form contatti">Contatti</a>
+                <a class="btn btn--primary" href="#cta">
+                    Richiedi una demo
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M5 12h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main id="contenuto">
+    <!-- 1) HERO / ABOVE THE FOLD -->
+    <section class="hero" id="top">
+        <div class="container">
+            <div class="hero__wrap">
+                <div class="hero__copy">
+                    <div class="badge" aria-label="Posizionamento servizio">
+                        <span class="kicker__dot" aria-hidden="true"></span>
+                        Benefit aziendale per personale con dress code formale / semi-formale
+                    </div>
+
+                    <h1>Il guardaroba aziendale che elimina lo stress di lavare e stirare gli abiti da lavoro</h1>
+                    <p>
+                        <strong style="color: rgba(255,255,255,0.92); font-weight: 700;">Corporate Wardrobe Care</strong>
+                        gestisce ritiro, lavaggio, stiratura e rotazione settimanale direttamente dall’ufficio.
+                        Per i dipendenti è “zero pensieri”; per HR è un programma semplice da attivare e misurare.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a class="btn btn--primary" href="#cta">Prenota una call con HR</a>
+                        <button class="btn btn--ghost" type="button" id="btn-brochure" aria-describedby="brochure-hint">
+                            Scarica la brochure
+                        </button>
+                    </div>
+
+                    <div class="hero__trust">
+                        <span class="badge">Ritmo settimanale prevedibile</span>
+                        <span class="badge">Partner professionali</span>
+                        <span class="badge">Cofinanziamento azienda/dipendente</span>
+                    </div>
+
+                    <div class="hero__note" id="brochure-hint">
+                        Nota: la brochure è un placeholder (esempio). Puoi sostituire il file con un PDF reale.
+                    </div>
+                </div>
+
+                <!-- Visual concept in puro HTML/CSS -->
+                <div class="hero__visual" aria-label="Visualizzazione del flusso settimanale">
+                    <div class="visual__grid">
+                        <div class="kicker">
+                            <span class="kicker__dot" aria-hidden="true"></span>
+                            Flusso settimanale “venerdì → lunedì”
+                        </div>
+
+                        <div class="timeline" role="list">
+                            <div class="timeline__item" role="listitem">
+                                <div class="timeline__icon" aria-hidden="true">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 7h10v3H7V7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                        <path d="M6 10h12l-1 11H7L6 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                        <path d="M9 7c0-2 6-2 6 0" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3>Venerdì: raccolta in azienda</h3>
+                                    <p>I dipendenti lasciano i capi usati nella propria sacca/punto di raccolta in ufficio.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__item" role="listitem">
+                                <div class="timeline__icon timeline__icon--green" aria-hidden="true">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                        <path d="M3 7h12l4 4v6H7L3 13V7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                        <path d="M7 17V9h6l4 4" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3>Weekend: gestione professionale</h3>
+                                    <p>Ritiro, lavaggio, stiratura e stoccaggio gestiti da un partner industriale qualificato.</p>
+                                </div>
+                            </div>
+
+                            <div class="timeline__item" role="listitem">
+                                <div class="timeline__icon" aria-hidden="true">
+                                    <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                        <path d="M7 21h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <path d="M9 21V7l3-3 3 3v14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                                        <path d="M9 12h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h3>Lunedì: capi pronti in ufficio</h3>
+                                    <p>Ogni dipendente trova i propri capi puliti e stirati, senza prenotazioni né conti al pezzo.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" style="margin-top: 4px;">
+                            <h3 style="margin-bottom: 6px;">Obiettivo operativo</h3>
+                            <p>
+                                Ridurre la “frizione” quotidiana: un gesto settimanale in ufficio sostituisce lavaggi, stiratura e corse in lavanderia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2) COME FUNZIONA (3 STEP) -->
+    <section class="section" id="come-funziona">
+        <div class="container">
+            <div class="section__head">
+                <div class="kicker">
+                    <span class="kicker__dot" aria-hidden="true"></span>
+                    Processo semplice, pensato per l’ufficio
+                </div>
+                <h2>Come funziona (3 step)</h2>
+                <p>Una routine settimanale chiara: raccolta, gestione professionale, riconsegna. Nessun carico operativo per HR.</p>
+            </div>
+
+            <div class="grid steps">
+                <article class="card card--hover">
+                    <div class="step__top">
+                        <div class="step__num">
+              <span class="step__icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24" fill="none">
+                  <path d="M7 7h10v3H7V7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M6 10h12l-1 11H7L6 10Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </span>
+                            Step 1
+                        </div>
+                        <span class="step__pill">Venerdì</span>
+                    </div>
+                    <h3>I dipendenti riempiono la sacca in ufficio</h3>
+                    <p>Camicie, pantaloni, giacche e completi: consegna in sede, con punto di raccolta dedicato.</p>
+                </article>
+
+                <article class="card card--hover">
+                    <div class="step__top">
+                        <div class="step__num">
+              <span class="step__icon" aria-hidden="true" style="background: rgba(34,197,94,0.12); border-color: rgba(34,197,94,0.18);">
+                <svg class="icon" viewBox="0 0 24 24" fill="none">
+                  <path d="M3 7h12l4 4v6H7L3 13V7Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M7 17V9h6l4 4" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </span>
+                            Step 2
+                        </div>
+                        <span class="step__pill">Ritiro + lavorazione</span>
+                    </div>
+                    <h3>Partner professionale: ritiro, lavaggio, stiratura e stoccaggio</h3>
+                    <p>Processo industriale qualificato e standardizzato, con gestione ricorrente e tracciabile.</p>
+                </article>
+
+                <article class="card card--hover">
+                    <div class="step__top">
+                        <div class="step__num">
+              <span class="step__icon" aria-hidden="true">
+                <svg class="icon" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 21V7l3-3 3 3v14" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M7 21h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </span>
+                            Step 3
+                        </div>
+                        <span class="step__pill">Lunedì</span>
+                    </div>
+                    <h3>Capi pronti in ufficio, senza che nessuno debba pensarci</h3>
+                    <p>Riconsegna ordinata e prevedibile: i capi tornano puliti, stirati e pronti per la settimana.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3) BENEFICI AZIENDA (HR) -->
+    <section class="section section--tight" id="benefici-azienda">
+        <div class="container">
+            <div class="two-col">
+                <div class="section__head" style="margin-bottom: 0;">
+                    <div class="kicker">
+                        <span class="kicker__dot" aria-hidden="true"></span>
+                        Benefici per HR, Direzione e Office Management
+                    </div>
+                    <h2>Perché conviene all’azienda</h2>
+                    <p>
+                        Un benefit concreto e ricorrente che migliora l’esperienza in ufficio senza trasformarsi in un progetto operativo interno.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3 style="margin-bottom: 10px;">Benefici chiave</h3>
+                    <ul class="list">
+                        <li>Migliora il benessere percepito e riduce micro-stress settimanali.</li>
+                        <li>Supporta retention, attraction ed employer branding con un benefit “usabile”.</li>
+                        <li>Servizio strutturato e ricorrente, con carico minimo per HR/Office Manager.</li>
+                        <li>Possibilità di cofinanziamento azienda/dipendente, trasparente e controllabile.</li>
+                        <li>Immagine professionale più costante: capi sempre curati e pronti.</li>
+                        <li>Facile da estendere per sedi e team (modello replicabile).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4) PERCHÉ PIACE AI DIPENDENTI -->
+    <section class="section" id="dipendenti">
+        <div class="container">
+            <div class="section__head">
+                <div class="kicker">
+                    <span class="kicker__dot" aria-hidden="true"></span>
+                    Progettato per essere “zero pensieri”
+                </div>
+                <h2>Perché piace ai dipendenti</h2>
+                <p>Un solo gesto in ufficio, ogni settimana. Il resto è gestito in modo continuativo e prevedibile.</p>
+            </div>
+
+            <div class="cards-4">
+                <article class="card card--hover">
+                    <div class="card__titleRow">
+                        <div class="miniIcon" aria-hidden="true">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 21a8.5 8.5 0 1 0 0-17 8.5 8.5 0 0 0 0 17Z" stroke="currentColor" stroke-width="2"/>
+                                <path d="M12 7v5l3 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3>Zero pensieri</h3>
+                    </div>
+                    <p>Niente lavatrici, niente stiratura, niente gestione di tempi e spostamenti.</p>
+                </article>
+
+                <article class="card card--hover">
+                    <div class="card__titleRow">
+                        <div class="miniIcon" aria-hidden="true">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M4 12h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M12 4v16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Routine semplice</h3>
+                    </div>
+                    <p>“Metti i capi nella sacca e basta”: una routine settimanale, senza prenotazioni.</p>
+                </article>
+
+                <article class="card card--hover">
+                    <div class="card__titleRow">
+                        <div class="miniIcon" aria-hidden="true">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2v20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M7 7h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M7 17h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Costi più prevedibili</h3>
+                    </div>
+                    <p>Quota mensile chiara e ridotta rispetto all’uso ricorrente di servizi on-demand tradizionali.</p>
+                </article>
+
+                <article class="card card--hover">
+                    <div class="card__titleRow">
+                        <div class="miniIcon" aria-hidden="true">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none">
+                                <path d="M20 7l-8 8-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M4 19h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3>Lunedì “pronto”</h3>
+                    </div>
+                    <p>La settimana inizia con capi già pronti e in ordine, senza stress last-minute.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5) MODELLO ECONOMICO -->
+    <section class="section" id="modello">
+        <div class="container">
+            <div class="section__head">
+                <div class="kicker">
+                    <span class="kicker__dot" aria-hidden="true"></span>
+                    Quota ricorrente e cofinanziamento
+                </div>
+                <h2>Modello economico (cofinanziamento)</h2>
+                <p>
+                    L’azienda contribuisce con una quota fissa mensile per dipendente; il dipendente integra con una quota ridotta.
+                    Insieme coprono un servizio dal valore percepito superiore rispetto a modelli “a pezzo”.
+                </p>
+            </div>
+
+            <div class="pricing">
+                <div class="pricing__boxes">
+                    <div class="priceBox">
+                        <div class="priceBox__title">
+                            <h3>Scenario classico: on-demand</h3>
+                            <span class="step__pill">variabile</span>
+                        </div>
+                        <p class="muted">Paghi a pezzo e gestisci ordini/ritiri. Comodo per urgenze, meno per una routine settimanale.</p>
+                        <div class="priceRow">
+                            <strong>Esempio</strong>
+                            <span>Settimana tipo: 30 € + gestione consegne</span>
+                        </div>
+                    </div>
+
+                    <div class="priceBox">
+                        <div class="priceBox__title">
+                            <h3>Fai da te</h3>
+                            <span class="step__pill">tempo personale</span>
+                        </div>
+                        <p class="muted">Costo monetario apparentemente più basso, ma elevato costo in tempo, energia e pianificazione.</p>
+                        <div class="priceRow">
+                            <strong>Esempio</strong>
+                            <span>Lavaggi e stiratura nel weekend + imprevisti (capi non pronti, tempi stretti).</span>
+                        </div>
+                    </div>
+
+                    <div class="priceBox priceBox--highlight">
+                        <div class="priceBox__title">
+                            <h3>Corporate Wardrobe Care</h3>
+                            <span class="priceBox__tag">ricorrente</span>
+                        </div>
+                        <p class="muted">Quota mensile chiara, routine integrata in ufficio, nessuna prenotazione. “Zero pensieri”.</p>
+                        <div class="priceRow">
+                            <strong>Esempio di cofinanziamento</strong>
+                            <span>Azienda: <strong>100 €</strong>/mese per dipendente · Dipendente: <strong>25 €</strong>/mese</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tableWrap" aria-label="Tabella comparativa">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>Caratteristica</th>
+                            <th>Fai da te</th>
+                            <th>Lavanderia on-demand</th>
+                            <th>Corporate Wardrobe Care</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>Prevedibilità settimanale</td>
+                            <td><span class="pillMaybe">dipende</span></td>
+                            <td><span class="pillMaybe">media</span></td>
+                            <td><span class="pillYes">alta</span></td>
+                        </tr>
+                        <tr>
+                            <td>Gestione “zero pensieri”</td>
+                            <td><span class="pillNo">no</span></td>
+                            <td><span class="pillMaybe">parziale</span></td>
+                            <td><span class="pillYes">sì</span></td>
+                        </tr>
+                        <tr>
+                            <td>Costi mensili chiari</td>
+                            <td><span class="pillMaybe">parziale</span></td>
+                            <td><span class="pillNo">variabili</span></td>
+                            <td><span class="pillYes">sì</span></td>
+                        </tr>
+                        <tr>
+                            <td>Integrazione nella vita d’ufficio</td>
+                            <td><span class="pillNo">no</span></td>
+                            <td><span class="pillNo">no</span></td>
+                            <td><span class="pillYes">sì</span></td>
+                        </tr>
+                        <tr>
+                            <td>Adatto a programmi HR ricorrenti</td>
+                            <td><span class="pillNo">no</span></td>
+                            <td><span class="pillMaybe">limitato</span></td>
+                            <td><span class="pillYes">sì</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="faint">
+                    Nota: i numeri sono esempi indicativi. Personalizza le quote in base a volumi, sedi e frequenza.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6) PERCHÉ È DIVERSO DA UNA LAVANDERIA -->
+    <section class="section section--tight" id="diverso">
+        <div class="container">
+            <div class="two-col">
+                <div class="section__head" style="margin-bottom: 0;">
+                    <div class="kicker">
+                        <span class="kicker__dot" aria-hidden="true"></span>
+                        Posizionamento chiaro
+                    </div>
+                    <h2>Perché è diverso da una lavanderia</h2>
+                    <p>
+                        Non è un semplice servizio “a chiamata”: è un programma continuativo di gestione del guardaroba,
+                        integrato nel ritmo dell’ufficio.
+                    </p>
+                </div>
+
+                <div class="grid">
+                    <div class="card card--hover">
+                        <h3>Programma, non singola transazione</h3>
+                        <p>Rotazione settimanale stabile: il valore è nella continuità, non nell’ordine occasionale.</p>
+                    </div>
+                    <div class="card card--hover">
+                        <h3>Integrato in sede</h3>
+                        <p>Punto di raccolta in azienda e flusso standard: meno coordinamento per persone e team.</p>
+                    </div>
+                    <div class="card card--hover">
+                        <h3>Prevedibile e replicabile</h3>
+                        <p>Stesse finestre di ritiro/consegna, standard operativi e comunicazione coerente.</p>
+                    </div>
+                    <div class="card card--hover">
+                        <h3>Obiettivo: togliere un pensiero</h3>
+                        <p>Benefit concreto: riduce attrito e carico mentale legato all’abbigliamento da lavoro.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7) USE CASE / A CHI È ADATTO -->
+    <section class="section" id="use-case">
+        <div class="container">
+            <div class="section__head">
+                <div class="kicker">
+                    <span class="kicker__dot" aria-hidden="true"></span>
+                    Dove crea più valore
+                </div>
+                <h2>Use case: a chi è adatto</h2>
+                <p>Ideale per organizzazioni con presenza in ufficio e aspettative di immagine professionale.</p>
+            </div>
+
+            <div class="usecases">
+                <article class="card card--hover">
+                    <h3>Studi legali</h3>
+                    <p>Dress code formale e giornate dense: la routine settimanale riduce tempo perso e imprevisti.</p>
+                </article>
+
+                <article class="card card--hover">
+                    <h3>Consulenza, banche, assicurazioni</h3>
+                    <p>Supporta standard di presentazione e migliora la qualità percepita dell’esperienza in sede.</p>
+                </article>
+
+                <article class="card card--hover">
+                    <h3>Direzioni corporate e HQ</h3>
+                    <p>Benefit semplice da comunicare, utile e coerente con contesti white-collar.</p>
+                </article>
+
+                <article class="card card--hover">
+                    <h3>Aziende con più sedi (scalabilità)</h3>
+                    <p>Modello replicabile su città diverse con partner locali; roadmap naturale verso copertura europea.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8) CTA FINALE + FORM -->
+    <section class="section cta" id="cta">
+        <div class="container">
+            <div class="cta__grid">
+                <div class="section__head" style="margin-bottom: 0;">
+                    <div class="kicker">
+                        <span class="kicker__dot" aria-hidden="true"></span>
+                        Attivazione rapida e pilota
+                    </div>
+                    <h2>Richiedi una demo o avvia un pilota nella tua azienda</h2>
+                    <p>
+                        Raccontaci contesto e dimensione: ti proponiamo un setup semplice (punti di raccolta, calendario, partner),
+                        con un modello di cofinanziamento chiaro e comunicazione pronta per HR.
+                    </p>
+
+                    <div class="card" style="margin-top: 14px;">
+                        <h3 style="margin-bottom: 8px;">Cosa succede dopo l’invio</h3>
+                        <ul class="list">
+                            <li>Ricevi un contatto entro 1–2 giorni lavorativi.</li>
+                            <li>Valutiamo sede/i, numero utenti e ritmo settimanale.</li>
+                            <li>Definiamo un pilota (durata, KPI e comunicazione interna).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <form class="form" id="lead-form" novalidate>
+                    <div class="form__grid">
+                        <div class="form__row">
+                            <label>
+                                Nome e cognome
+                                <input name="name" type="text" autocomplete="name" placeholder="Es. Maria Rossi" required />
+                            </label>
+
+                            <label>
+                                Email lavoro
+                                <input name="email" type="email" autocomplete="email" placeholder="nome@azienda.com" required />
+                            </label>
+                        </div>
+
+                        <div class="form__row">
+                            <label>
+                                Nome azienda
+                                <input name="company" type="text" autocomplete="organization" placeholder="Es. ACME S.p.A." required />
+                            </label>
+
+                            <label>
+                                Numero dipendenti (indicativo)
+                                <select name="employees" required>
+                                    <option value="" selected disabled>Seleziona…</option>
+                                    <option value="1-50">1–50</option>
+                                    <option value="51-200">51–200</option>
+                                    <option value="201-1000">201–1000</option>
+                                    <option value="1000+">1000+</option>
+                                </select>
+                            </label>
+                        </div>
+
+                        <label>
+                            Messaggio
+                            <textarea name="message" placeholder="Es. Sede Milano, 120 persone, dress code formale. Vorremmo un pilota su 40 utenti."></textarea>
+                        </label>
+
+                        <div class="form__footer">
+                            <button class="btn btn--primary" type="submit">Invia richiesta</button>
+                            <div class="form__status" id="form-status" aria-live="polite"></div>
+                        </div>
+
+                        <p class="faint" style="font-size: 0.9rem;">
+                            Inviando il form accetti l’uso dei dati per rispondere alla richiesta (testo privacy placeholder).
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9) FOOTER -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <strong style="color: rgba(255,255,255,0.92);">Corporate Wardrobe Care</strong>
+                    <div class="muted">Servizio pensato per aziende europee · Operatività replicabile per sedi multiple.</div>
+                </div>
+
+                <div class="footer__links" aria-label="Link legali">
+                    <a href="#" aria-label="Privacy (placeholder)">Privacy</a>
+                    <a href="#" aria-label="Termini (placeholder)">Terms</a>
+                    <a href="#top" aria-label="Torna in alto">Torna su</a>
+                </div>
+
+                <div class="faint" style="font-size: 0.9rem;">
+                    © <span id="year"></span> Corporate Wardrobe Care. Tutti i diritti riservati.
+                </div>
+            </div>
+        </div>
+    </footer>
+</main>
+
+</body>
+</html>
