@@ -273,11 +273,20 @@
         if (!navToggle || !navLinks) return;
         navLinks.classList.remove('is-open');
         navToggle.setAttribute('aria-expanded', 'false');
+        body.classList.remove('menu-open');
+        // Aggiorna visibilità FAB quando il menu si chiude
+        if (typeof updateFabVisibility === 'function') {
+            updateFabVisibility();
+        }
     }
     function openMenu() {
         if (!navToggle || !navLinks) return;
         navLinks.classList.add('is-open');
         navToggle.setAttribute('aria-expanded', 'true');
+        body.classList.add('menu-open');
+        // Nascondi immediatamente il FAB quando il menu si apre
+        const fabNow = document.querySelector('.fab.fab-call');
+        if (fabNow) fabNow.classList.add('is-hidden');
     }
     function toggleMenu() {
         if (!navToggle || !navLinks) return;
@@ -300,4 +309,56 @@
             if (window.innerWidth >= 820) closeMenu();
         });
     }
+
+    // =========================
+    // FAB “Prenota una call”: visibile solo quando l'hero NON è visibile (mobile)
+    // =========================
+    const fab = document.querySelector('.fab.fab-call');
+    const hero = document.querySelector('.hero');
+
+    function isMobileViewport() {
+        return window.innerWidth < 820;
+    }
+
+    function isHeroInView() {
+        if (!hero) return false;
+        const rect = hero.getBoundingClientRect();
+        return rect.bottom > 0 && rect.top < window.innerHeight;
+    }
+
+    function setFabVisible(shouldShow) {
+        if (!fab) return;
+        if (shouldShow) fab.classList.remove('is-hidden');
+        else fab.classList.add('is-hidden');
+    }
+
+    function computeBlocked() {
+        return body.classList.contains('modal-open') || body.classList.contains('menu-open');
+    }
+
+    function updateFabVisibility(heroVisibleParam) {
+        if (!fab) return;
+        if (!isMobileViewport()) { setFabVisible(false); return; }
+        const heroVisible = (typeof heroVisibleParam === 'boolean') ? heroVisibleParam : isHeroInView();
+        const blocked = computeBlocked();
+        setFabVisible(!heroVisible && !blocked);
+    }
+
+    // IntersectionObserver per rilevare visibilità della hero
+    if ('IntersectionObserver' in window && hero && fab) {
+        const io = new IntersectionObserver((entries) => {
+            const entry = entries[0];
+            const visible = !!(entry && (entry.isIntersecting || entry.intersectionRatio > 0));
+            updateFabVisibility(visible);
+        }, { root: null, threshold: [0, 0.1, 0.15] });
+        io.observe(hero);
+    }
+
+    // Fallback + aggiornamenti su eventi comuni
+    ['scroll', 'resize', 'orientationchange'].forEach(evt => {
+        window.addEventListener(evt, () => updateFabVisibility());
+    });
+
+    // Aggiorna all'avvio
+    updateFabVisibility();
 })();

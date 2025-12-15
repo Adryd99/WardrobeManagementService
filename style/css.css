@@ -274,6 +274,26 @@ img { max-width: 100%; height: auto; }
 .fab .icon { width: 20px; height: 20px; }
 .fab__label { display: inline; }
 
+/* Stato nascosto (usato per visibilità condizionata su mobile) */
+.fab.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(6px);
+    transition: opacity 160ms ease, transform 160ms ease;
+}
+.fab:not(.is-hidden) {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 160ms ease, transform 160ms ease;
+}
+
+/* Non mostrare il FAB quando sono aperti modali o il menu mobile */
+body.modal-open .fab,
+body.menu-open .fab {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
 /* Mostra FAB solo su mobile */
 @media (min-width: 820px) {
     .fab { display: none; }
