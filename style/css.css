@@ -48,6 +48,7 @@ body {
             linear-gradient(180deg, var(--bg), #070b14 70%);
 }
 body.modal-open { overflow: hidden; }
+html, body { max-width: 100%; overflow-x: hidden; }
 
 a { color: inherit; }
 img { max-width: 100%; height: auto; }
@@ -153,6 +154,53 @@ img { max-width: 100%; height: auto; }
     gap: 10px;
 }
 
+/* Toggle menu (mobile) */
+.nav__toggle {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.14);
+    background: rgba(255,255,255,0.05);
+    color: var(--text);
+    cursor: pointer;
+}
+.nav__toggle:hover { background: rgba(255,255,255,0.08); }
+
+/* Pannello mobile dropdown sotto l'header */
+@media (max-width: 819.98px) {
+    .nav {
+        position: relative;
+    }
+    .nav__links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+        padding: 10px var(--gutter) 12px;
+        background: rgba(11, 18, 32, 0.96);
+        border-bottom-left-radius: 14px;
+        border-bottom-right-radius: 14px;
+        border: 1px solid rgba(255,255,255,0.10);
+        border-top: 0;
+        box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+    }
+    .nav__links a {
+        padding: 10px 12px;
+        border: 1px solid rgba(255,255,255,0.08);
+        background: rgba(255,255,255,0.04);
+    }
+    .nav__links.is-open { display: flex; }
+    /* Nascondi azioni header su mobile per evitare overflow */
+    .nav__actions { display: none; }
+}
+
 .btn {
     appearance: none;
     border: 1px solid transparent;
@@ -199,6 +247,36 @@ img { max-width: 100%; height: auto; }
     width: 18px;
     height: 18px;
     display: inline-block;
+}
+
+/* =========================
+   Floating Action Button (mobile): Prenota una call
+   ========================= */
+.fab {
+    position: fixed;
+    right: max(14px, env(safe-area-inset-right));
+    bottom: max(14px, env(safe-area-inset-bottom));
+    z-index: 60;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    border-radius: 999px;
+    padding: 12px 14px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 1px solid rgba(76,195,255,0.45);
+    background: linear-gradient(135deg, rgba(76,195,255,0.95), rgba(76,195,255,0.70));
+    color: #07101f;
+    box-shadow: 0 18px 40px rgba(76,195,255,0.22);
+}
+.fab:focus { outline: none; box-shadow: 0 0 0 5px rgba(76,195,255,0.22), 0 18px 40px rgba(76,195,255,0.22); }
+.fab .icon { width: 20px; height: 20px; }
+.fab__label { display: inline; }
+
+/* Mostra FAB solo su mobile */
+@media (min-width: 820px) {
+    .fab { display: none; }
 }
 
 /* =========================
@@ -741,8 +819,30 @@ textarea { min-height: 110px; resize: vertical; }
 /* =========================
    Responsive breakpoints
    ========================= */
+/* Small phones */
+@media (max-width: 480px) {
+    .container { padding: 0 14px; }
+    .card { padding: 14px; }
+    .hero__visual { padding: 12px; }
+    .modal__body { padding: 14px var(--gutter) 18px; }
+    .hero__actions { gap: 8px; }
+    .hero__actions .btn { flex: 1 1 100%; }
+}
+
+/* Intermedi: 640px */
+@media (min-width: 640px) and (max-width: 819.98px) {
+    .cards-4 { grid-template-columns: repeat(2, 1fr); }
+    .usecases { grid-template-columns: repeat(2, 1fr); }
+    .pricing__boxes { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Intermedi bis: 700px */
+@media (min-width: 700px) and (max-width: 819.98px) {
+    .two-col { grid-template-columns: 1fr 1fr; gap: 18px; }
+}
 @media (min-width: 820px) {
-    .nav__links { display: inline-flex; }
+    .nav__links { display: inline-flex; position: static; background: transparent; border: 0; box-shadow: none; }
+    .nav__toggle { display: none; }
 
     .hero { padding: 68px 0 22px; }
     .hero__wrap {
