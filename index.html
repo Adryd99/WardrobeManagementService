@@ -57,15 +57,15 @@
                         Benefit aziendale per personale con dress code formale / semi-formale
                     </div>
 
-                    <h1>Il guardaroba aziendale che elimina lo stress di lavare e stirare gli abiti da lavoro</h1>
+                    <h1>La gestione ricorrente dei capi da lavoro per i tuoi dipendenti.</h1>
                     <p>
                         <strong style="color: rgba(255,255,255,0.92); font-weight: 700;">Corporate Wardrobe Care</strong>
                         gestisce ritiro, lavaggio, stiratura e rotazione settimanale direttamente dall’ufficio.
-                        Per i dipendenti è “zero pensieri”; per HR è un programma semplice da attivare e misurare.
+                        Per i dipendenti è “zero pensieri”; per l'azienda è un programma semplice da attivare e misurare.
                     </p>
 
                     <div class="hero__actions">
-                        <a class="btn btn--primary" href="#cta">Prenota una call con HR</a>
+                        <a class="btn btn--primary" href="#cta">Prenota una call</a>
                         <button class="btn btn--ghost" type="button" id="btn-brochure" aria-describedby="brochure-hint">
                             Scarica la brochure
                         </button>
@@ -101,7 +101,7 @@
                                 </div>
                                 <div>
                                     <h3>Venerdì: raccolta in azienda</h3>
-                                    <p>I dipendenti lasciano i capi usati nella propria sacca/punto di raccolta in ufficio.</p>
+                                    <p>I dipendenti lasciano i capi usati nella propria garment bag nel punto di raccolta in ufficio.</p>
                                 </div>
                             </div>
 
@@ -171,7 +171,7 @@
                         </div>
                         <span class="step__pill">Venerdì</span>
                     </div>
-                    <h3>I dipendenti riempiono la sacca in ufficio</h3>
+                    <h3>I dipendenti riempiono la garment bag in ufficio</h3>
                     <p>Camicie, pantaloni, giacche e completi: consegna in sede, con punto di raccolta dedicato.</p>
                 </article>
 
@@ -278,7 +278,7 @@
                         </div>
                         <h3>Routine semplice</h3>
                     </div>
-                    <p>“Metti i capi nella sacca e basta”: una routine settimanale, senza prenotazioni.</p>
+                    <p>“Metti i capi nella garment bag e basta”: una routine settimanale, senza prenotazioni.</p>
                 </article>
 
                 <article class="card card--hover">
@@ -360,7 +360,7 @@
                         <p class="muted">Quota mensile chiara, routine integrata in ufficio, nessuna prenotazione. “Zero pensieri”.</p>
                         <div class="priceRow">
                             <strong>Esempio di cofinanziamento</strong>
-                            <span>Azienda: <strong>100 €</strong>/mese per dipendente · Dipendente: <strong>25 €</strong>/mese</span>
+                            <span>Azienda: <strong>125 €</strong>/mese per dipendente · Dipendente: <strong>25 €</strong>/mese</span>
                         </div>
                     </div>
                 </div>
@@ -410,9 +410,6 @@
                     </table>
                 </div>
 
-                <p class="faint">
-                    Nota: i numeri sono esempi indicativi. Personalizza le quote in base a volumi, sedi e frequenza.
-                </p>
             </div>
         </div>
     </section>
@@ -559,13 +556,112 @@
                         </div>
 
                         <p class="faint" style="font-size: 0.9rem;">
-                            Inviando il form accetti l’uso dei dati per rispondere alla richiesta (testo privacy placeholder).
+                            Inviando il form dichiari di aver letto l’<a href="#privacy">informativa privacy</a> e acconsenti al trattamento dei dati per evadere la tua richiesta.
                         </p>
                     </div>
                 </form>
             </div>
         </div>
     </section>
+
+    <!-- 9) PRIVACY / GDPR (MODAL) -->
+    <div id="privacy-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="privacy-title" hidden>
+        <div class="modal__overlay" data-close="true"></div>
+        <div class="modal__dialog" role="document">
+            <header class="modal__header">
+                <div class="kicker">
+                    <span class="kicker__dot" aria-hidden="true"></span>
+                    Informativa sul trattamento dei dati personali
+                </div>
+                <h2 id="privacy-title">Privacy & Informativa GDPR</h2>
+                <button type="button" class="modal__close" aria-label="Chiudi privacy" data-close="true">×</button>
+            </header>
+
+            <div class="modal__body">
+                <div class="legal" id="privacy">
+                    <div class="card">
+                        <h3>Titolare del trattamento</h3>
+                        <p>
+                            Corporate Wardrobe Care ("Titolare").
+                            Per richieste relative alla privacy: <a href="mailto:privacy@corporatewardrobecare.example">privacy@corporatewardrobecare.example</a>.
+                        </p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Tipologie di dati trattati</h3>
+                        <ul class="list">
+                            <li>Dati anagrafici e di contatto: nome, cognome, email, azienda, numero indicativo di dipendenti.</li>
+                        <li>Contenuti del messaggio inviato tramite form di contatto.</li>
+                        <li>Dati tecnici di navigazione (es. indirizzo IP, timestamp) raccolti in modo automatico per finalità di sicurezza e funzionamento del sito.</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3>Finalità e base giuridica</h3>
+                    <ul class="list">
+                        <li>
+                            Gestione delle richieste inviate tramite il form di contatto e organizzazione di demo/pilota —
+                            esecuzione di misure precontrattuali su richiesta dell’interessato (art. 6.1.b GDPR).
+                        </li>
+                        <li>
+                            Riscontro a richieste informative generiche — legittimo interesse del Titolare a dare seguito alle richieste (art. 6.1.f GDPR).
+                        </li>
+                        <li>
+                            Adempimento di obblighi di legge eventualmente applicabili (art. 6.1.c GDPR).
+                        </li>
+                        <li>
+                            Attività di comunicazione commerciale solo se da te esplicitamente richiesto/consentito — consenso (art. 6.1.a GDPR).
+                        </li>
+                    </ul>
+                </div>
+
+                    <div class="card">
+                        <h3>Conferimento dei dati</h3>
+                        <p>Il conferimento dei dati contrassegnati come obbligatori nel form è necessario per poter rispondere alla tua richiesta; il mancato conferimento comporta l’impossibilità di procedere.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Modalità del trattamento e sicurezza</h3>
+                        <p>I dati sono trattati con strumenti informatici e/o cartacei da personale autorizzato, nel rispetto dei principi di liceità, correttezza e trasparenza e adottando misure tecniche e organizzative adeguate alla sicurezza.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Destinatari e categorie di fornitori</h3>
+                        <p>I dati possono essere comunicati a fornitori che erogano servizi strumentali (es. hosting, strumenti di comunicazione, CRM), nominati Responsabili del trattamento ai sensi dell’art. 28 GDPR. L’elenco aggiornato dei Responsabili è disponibile su richiesta.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Trasferimenti extra-UE</h3>
+                        <p>Qualora alcuni fornitori si trovino fuori dallo Spazio Economico Europeo, il trasferimento avverrà nel rispetto del Capo V del GDPR, sulla base di decisioni di adeguatezza, Clausole Contrattuali Standard o altre garanzie adeguate.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Periodo di conservazione</h3>
+                        <p>I dati raccolti tramite il form saranno conservati per il tempo necessario a gestire la richiesta e, in ogni caso, non oltre 24 mesi dall’ultimo contatto utile, salvo ulteriori obblighi di legge o legittima difesa in giudizio.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Diritti dell’interessato</h3>
+                        <p>Hai diritto di accedere ai tuoi dati, chiederne la rettifica o cancellazione, la limitazione del trattamento, opporti in qualsiasi momento al trattamento basato sul legittimo interesse e richiedere la portabilità dei dati (artt. 15–22 GDPR).</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Come esercitare i diritti</h3>
+                        <p>Puoi esercitare i diritti scrivendo a <a href="mailto:privacy@corporatewardrobecare.example">privacy@corporatewardrobecare.example</a>. Hai inoltre diritto di proporre reclamo all’Autorità Garante per la protezione dei dati personali competente.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3>Cookie e tecnologie similari</h3>
+                        <p>Questo sito utilizza solo i cookie tecnici necessari al suo funzionamento. Eventuali cookie di terze parti o funzionalità aggiuntive saranno descritti in un’apposita cookie policy, ove presente.</p>
+                    </div>
+
+                    <div class="faint" style="font-size: 0.9rem; margin-top: 8px;">
+                        Ultimo aggiornamento: <span id="privacy-last-update">01/2025</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- 9) FOOTER -->
     <footer class="footer" role="contentinfo">
@@ -577,7 +673,7 @@
                 </div>
 
                 <div class="footer__links" aria-label="Link legali">
-                    <a href="#" aria-label="Privacy (placeholder)">Privacy</a>
+                    <a href="#privacy" aria-label="Vai alla sezione Privacy">Privacy</a>
                     <a href="#" aria-label="Termini (placeholder)">Terms</a>
                     <a href="#top" aria-label="Torna in alto">Torna su</a>
                 </div>

@@ -47,6 +47,7 @@ body {
             radial-gradient(900px 700px at 50% 100%, rgba(76,195,255,0.10), transparent 55%),
             linear-gradient(180deg, var(--bg), #070b14 70%);
 }
+body.modal-open { overflow: hidden; }
 
 a { color: inherit; }
 img { max-width: 100%; height: auto; }
@@ -275,6 +276,73 @@ p { margin: 0; font-size: var(--p); color: var(--muted); }
 
 .muted { color: var(--muted); }
 .faint { color: var(--faint); }
+
+/* =========================
+   Modal (Privacy)
+   ========================= */
+.modal[hidden] { display: none !important; }
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: grid;
+    grid-template-rows: 1fr;
+}
+.modal__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(2, 6, 14, 0.66);
+    backdrop-filter: blur(4px);
+}
+.modal__dialog {
+    position: relative;
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background:
+            radial-gradient(900px 600px at 10% 0%, rgba(76,195,255,0.10), transparent 60%),
+            radial-gradient(900px 600px at 90% 0%, rgba(34,197,94,0.08), transparent 60%),
+            var(--bg);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.modal__header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    display: grid;
+    gap: 8px;
+    padding: 14px var(--gutter);
+    border-bottom: 1px solid rgba(255,255,255,0.10);
+    background: rgba(11,18,32,0.80);
+    backdrop-filter: blur(6px);
+}
+.modal__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.08);
+    color: var(--text);
+    font-size: 24px;
+    line-height: 1;
+    cursor: pointer;
+}
+.modal__close:hover { background: rgba(255,255,255,0.12); }
+.modal__body {
+    position: relative;
+    padding: 18px var(--gutter) 24px;
+    overflow: auto;
+}
+
+/* Spazio extra tra le card della privacy */
+.legal { display: grid; gap: 20px; }
+.legal .card { padding: 16px; }
 
 /* =========================
    Hero
