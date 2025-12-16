@@ -311,6 +311,47 @@
     }
 
     // =========================
+    // FAQ: accordion accessibile
+    // =========================
+    (function initFaqAccordion() {
+        const container = document.querySelector('.accordion');
+        if (!container) return;
+        const buttons = container.querySelectorAll('.accordion__button');
+        const panels = container.querySelectorAll('.accordion__panel');
+
+        function closeAll(exceptId) {
+            buttons.forEach(btn => {
+                const controls = btn.getAttribute('aria-controls');
+                if (controls !== exceptId) {
+                    btn.setAttribute('aria-expanded', 'false');
+                }
+            });
+            panels.forEach(p => {
+                if (p.id !== exceptId) p.hidden = true;
+            });
+        }
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const panelId = btn.getAttribute('aria-controls');
+                if (!panelId) return;
+                const panel = document.getElementById(panelId);
+                if (!panel) return;
+                const isOpen = btn.getAttribute('aria-expanded') === 'true';
+                if (isOpen) {
+                    btn.setAttribute('aria-expanded', 'false');
+                    panel.hidden = true;
+                } else {
+                    // One-open: chiudi gli altri
+                    closeAll(panelId);
+                    btn.setAttribute('aria-expanded', 'true');
+                    panel.hidden = false;
+                }
+            });
+        });
+    })();
+
+    // =========================
     // FAB “Prenota una call”: visibile solo quando l'hero NON è visibile (mobile)
     // =========================
     const fab = document.querySelector('.fab.fab-call');
