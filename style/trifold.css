@@ -100,3 +100,77 @@ p { margin: 0; line-height: 1.45; }
   body.trifold { padding: 16px; }
   .page { box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
 }
+
+/* Layout responsive a schermo: lettura comoda su mobile/tablet */
+@media screen and (max-width: 1024px) {
+  /* impagina i pannelli in verticale, con ordine di lettura naturale */
+  .page {
+    display: flex;
+    flex-direction: column;
+    max-width: 720px;
+  }
+
+  .panel {
+    min-height: auto;
+    border-left: 0;
+    border-top: 1px solid rgba(255,255,255,0.06);
+  }
+  .panel:first-child { border-top: 0; }
+
+  .panel__content {
+    padding: 24px 16px;
+    gap: 16px;
+  }
+
+  .cover__logo { width: 80px; }
+  .cover__title { font-size: 20px; margin: 12px 0 6px; }
+  .cover__subtitle { font-size: 14px; }
+
+  .badge, .badges .badge { font-size: 12px; padding: 6px 10px; }
+  .badges { justify-content: flex-start; }
+
+  .list, .steps { gap: 10px; }
+
+  /* Ordina l'esterno per mostrare prima la copertina su mobile */
+  .page--outer { display: flex; }
+  .page--outer .panel--outer-cover { order: 1; }
+  .page--outer .panel--outer-flap { order: 2; }
+  .page--outer .panel--outer-back { order: 3; }
+
+  /* CTA più leggibile */
+  .cta { padding: 16px; border-radius: 10px; }
+  .cta__title { font-size: 18px; }
+  .cta__text { font-size: 14px; }
+
+  /* Barra azioni visibile/sticky su mobile */
+  .print-help {
+    position: sticky;
+    bottom: 0;
+    background: rgba(15,21,48,0.9);
+    backdrop-filter: saturate(120%) blur(6px);
+    padding: 10px 12px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    z-index: 10;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  body.trifold { padding: 8px; }
+  .page { max-width: 100%; }
+  .brand-block__logo { width: 70px; }
+}
+
+/* Forza il layout di stampa invariato quando si stampa */
+@media print {
+  html, body.trifold { background: #fff; color: #000; }
+  .page {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    box-shadow: none !important;
+    max-width: unset;
+    background: #fff;
+  }
+  .panel { border-left: 1px solid #ccc; border-top: 0; min-height: 210mm; }
+  .panel:first-child { border-left: 0; }
+  .print-help { display: none !important; }
+}
