@@ -21,24 +21,8 @@
     const brochureBtn = document.getElementById('btn-brochure');
     if (brochureBtn) {
         brochureBtn.addEventListener('click', () => {
-            // Placeholder: sostituisci con un link reale a PDF.
-            const blob = new Blob(
-                [
-                    "Corporate Wardrobe Care — Brochure (placeholder)\n\n" +
-                    "Sostituisci questo file con un PDF reale o collega un asset.\n" +
-                    "Sezioni suggerite:\n" +
-                    "- Panoramica programma\n- Come funziona\n- Modello economico\n- Requisiti operativi\n- FAQ\n"
-                ],
-                {type: "text/plain;charset=utf-8"}
-            );
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'Corporate-Wardrobe-Care-brochure-placeholder.txt';
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            URL.revokeObjectURL(url);
+            // Apri la brochure trifold in una nuova scheda; l'utente può stamparla/esportarla in PDF
+            window.open('./brochure.html', '_blank', 'noopener');
         });
     }
 

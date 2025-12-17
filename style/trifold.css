@@ -1,0 +1,102 @@
+/* Stili per brochure trifold A4 (orizzontale), stampa fronte/retro */
+
+@page {
+  size: A4 landscape;
+  margin: 10mm;
+}
+
+html, body.trifold {
+  background: #0b1020; /* coerente con tema sito */
+  color: #e9eef5;
+}
+
+.page {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0;
+  page-break-after: always;
+  border: 1px solid rgba(255,255,255,0.06);
+  margin: 8px auto;
+  max-width: 1123px; /* approx A4 landscape px @96dpi */
+  background: #0f1530;
+}
+
+.page:last-of-type { page-break-after: auto; }
+
+.panel {
+  min-height: 210mm; /* altezza pagina in landscape */
+  border-left: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+}
+.panel:first-child { border-left: 0; }
+
+.panel__content {
+  padding: 18mm 12mm;
+  display: flex;
+  flex-direction: column;
+  gap: 8mm;
+}
+
+.panel__content--cover {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.cover__logo {
+  width: 48mm;
+  height: auto;
+  opacity: 0.95;
+}
+.cover__title {
+  font-size: 22pt;
+  margin: 8mm 0 2mm;
+}
+.cover__subtitle {
+  font-size: 12pt;
+  color: rgba(255,255,255,0.8);
+}
+
+.badge, .badges .badge {
+  display: inline-block;
+  padding: 6px 10px;
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  font-size: 10pt;
+  color: #dfe7ff;
+}
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+}
+
+h1,h2,h3,h4 { color: #ffffff; margin: 0; }
+p { margin: 0; line-height: 1.45; }
+.muted { color: rgba(255,255,255,0.7); }
+
+.list { padding-left: 16px; margin: 0; display: grid; gap: 4mm; }
+.list li { margin-left: 4px; }
+
+.steps { padding-left: 16px; margin: 0; display: grid; gap: 5mm; }
+.steps li { margin-left: 4px; }
+
+.brand-block { margin-top: auto; }
+.brand-block__logo { width: 30mm; height: auto; display: block; }
+.brand-block__name { font-weight: 700; margin-top: 6mm; }
+.brand-block__tag { color: rgba(255,255,255,0.7); font-size: 10pt; }
+
+.cta { border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 10mm; background: rgba(255,255,255,0.03); }
+.cta__title { font-size: 14pt; margin-bottom: 2mm; }
+.cta__text { color: rgba(255,255,255,0.85); margin-bottom: 4mm; }
+.cta__contacts { display: grid; gap: 2mm; }
+
+.print-help { display: flex; gap: 12px; justify-content: center; padding: 12px; }
+.btn { cursor: pointer; }
+
+/* Anteprima a schermo: adattamenti responsive */
+@media screen {
+  body.trifold { padding: 16px; }
+  .page { box-shadow: 0 10px 30px rgba(0,0,0,0.35); }
+}
